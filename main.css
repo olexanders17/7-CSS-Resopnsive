@@ -1,18 +1,26 @@
 
-.red, .orange, .yellow, .pink, .green, .blue {
+.flex-container {
+    display: inline-flex;
+    flex-flow: row wrap;
+    /* justify-content: flex-start;*/
+    align-content: center;
 
-    height: 100px;
-    margin: 2px;
+}
+
+.yellow {
+
+   line-height: 190px
+
 }
 
 div {
     text-align: center;
+
 }
 
 .red {
     background-color: red;
     width: 100%;
-
 }
 
 .orange {
@@ -22,7 +30,7 @@ div {
 
 .yellow {
     background-color: yellow;
-    width: 150px;
+    width: 200px;
 
 }
 
@@ -38,4 +46,188 @@ div {
     background-color: blue;
 }
 
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
 
+}
+
+.red, .orange, .yellow, .pink, .green, .blue {
+    flex: 100%;
+    height: 100px;
+    margin: 2px;
+}
+
+/*mobile*/
+@media all  and (max-width: 400px  ) and (min-width: 0px ) {
+
+    .mobile {
+        flex: 100%;
+
+    }
+
+    .desktop, .tablet {
+        display: none;
+    }
+
+    .red {
+        order: 1;
+        height: 50px;
+    }
+
+    .yellow {
+        order: 2;
+        line-height: 90px
+    }
+
+    .orange {
+        order: 3;
+    }
+
+    .green {
+        order: 4;
+    }
+
+    .pink {
+        order: 5;
+    }
+
+    .blue {
+        order: 6;
+    }
+
+    .y2, .y3, .y4 {
+        display: none;
+    }
+
+}
+
+/*tablet*/
+@media all  and (max-width: 600px ) and (min-width: 400px ) {
+    .tablet {
+        flex: 100%;
+
+    }
+
+    .desktop, .mobile {
+        display: none;
+    }
+
+    .red {
+        order: 1;
+    }
+
+    .yellow {
+        order: 4;
+        line-height: 100px
+    }
+
+    .orange {
+        order: 2;
+        flex: 65%;
+    }
+
+    .green, .orange {
+
+    }
+
+    .green {
+        order: 3;
+        flex: 30%;
+    }
+
+    .pink {
+        order: 5;
+        height: 300px;
+    }
+
+    .blue {
+        order: 6;
+
+    }
+
+    .y2, .y3, .y4 {
+        display: none;
+    }
+
+}
+
+/*desktop*/
+@media all  and (min-width: 600px ) and (max-width: 5000px ) {
+
+    .flex-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+    }
+
+    .yellow {
+        height: 200px;
+        line-height: 190px
+    }
+
+    .desktop {
+        flex: 100%;
+
+    }
+
+    .tablet, .mobile {
+        display: none;
+    }
+
+    .red {
+        order: 1;
+    }
+
+    .orange {
+        order: 2;
+
+    }
+
+    .y1, .y2 {
+        order: 3;
+        align-self: flex-start;
+        flex: 0 0 30%;
+    }
+
+    .green {
+
+        flex: 0 0 37%;
+        order: 4;
+        align-self: flex-start;
+
+        height: 300px;
+
+    }
+
+    .y3, .y4 {
+
+        order: 5;
+        flex: 0 0 30%;
+        align-self: auto;
+        margin-top: -90px;
+
+    }
+
+    .pink {
+        order: 7;
+        height: 400px;
+
+        flex: 0 0 61.5%;
+        align-self: flex-start;
+        margin-top: -185px;
+
+    }
+
+    .blue {
+        clear: both;
+        order: 6;
+        flex: 0 0 37%;
+        align-self: flex-end;
+
+        height: 300px;
+
+    }
+
+}
