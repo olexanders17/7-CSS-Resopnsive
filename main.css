@@ -1,0 +1,41 @@
+
+.red, .orange, .yellow, .pink, .green, .blue {
+
+    height: 100px;
+    margin: 2px;
+}
+
+div {
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+    width: 100%;
+
+}
+
+.orange {
+    background-color: orange;
+    width: 100%;
+}
+
+.yellow {
+    background-color: yellow;
+    width: 150px;
+
+}
+
+.pink {
+    background-color: pink;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+
